@@ -1,0 +1,328 @@
+{
+  "transactions": [
+    {
+      "id": "1",
+      "value": "100",
+      "description": "T-Shirt Black/M",
+      "method": "credit_card",
+      "cardNumber": "3486",
+      "cardHolderName": "Fonsi Julian",
+      "cardExpirationDate": "04/28",
+      "cardCvv": "290"
+    },
+    {
+      "id": "2",
+      "value": "340.50",
+      "description": "T-Shirt Black/M",
+      "method": "debit_card",
+      "cardNumber": "4455",
+      "cardHolderName": "Charles Le Clerc",
+      "cardExpirationDate": "09/29",
+      "cardCvv": "998"
+    },
+    {
+      "id": "3",
+      "value": "200",
+      "description": "T-Shirt White/W",
+      "method": "debit_card",
+      "cardNumber": "6543",
+      "cardHolderName": "Bette Davis",
+      "cardExpirationDate": "06/26",
+      "cardCvv": "328"
+    },
+    {
+      "id": "4",
+      "value": "100.00",
+      "description": "T-Shirt Black M",
+      "method": "debit_card",
+      "cardNumber": "3456",
+      "cardHolderName": "Juan Pérez",
+      "cardExpirationDate": "04/28",
+      "cardCvv": "123"
+    },
+    {
+      "id": "6",
+      "value": "100.00",
+      "description": "E2E Test",
+      "method": "debit_card",
+      "cardNumber": "4242",
+      "cardHolderName": "E2E",
+      "cardExpirationDate": "12/34"
+    },
+    {
+      "id": "1",
+      "value": "100.00",
+      "description": "E2E Test",
+      "method": "debit_card",
+      "cardNumber": "4242",
+      "cardHolderName": "E2E",
+      "cardExpirationDate": "12/34"
+    },
+    {
+      "id": "1",
+      "value": "100.00",
+      "description": "E2E Test",
+      "method": "debit_card",
+      "cardNumber": "4242",
+      "cardHolderName": "E2E",
+      "cardExpirationDate": "12/34"
+    },
+    {
+      "id": "1",
+      "value": "100.00",
+      "description": "E2E Test",
+      "method": "debit_card",
+      "cardNumber": "4242",
+      "cardHolderName": "E2E",
+      "cardExpirationDate": "12/34"
+    },
+    {
+      "id": "1",
+      "value": "100.00",
+      "description": "E2E Test",
+      "method": "debit_card",
+      "cardNumber": "4242",
+      "cardHolderName": "E2E",
+      "cardExpirationDate": "12/34"
+    },
+    {
+      "id": "1",
+      "value": "100.00",
+      "description": "E2E Test",
+      "method": "debit_card",
+      "cardNumber": "4242",
+      "cardHolderName": "E2E",
+      "cardExpirationDate": "12/34"
+    },
+    {
+      "id": "2",
+      "value": "100.00",
+      "description": "E2E Test",
+      "method": "debit_card",
+      "cardNumber": "4242",
+      "cardHolderName": "E2E",
+      "cardExpirationDate": "12/34"
+    },
+    {
+      "id": "1",
+      "value": "100.00",
+      "description": "E2E Test",
+      "method": "debit_card",
+      "cardNumber": "4242",
+      "cardHolderName": "E2E",
+      "cardExpirationDate": "12/34"
+    },
+    {
+      "id": "2",
+      "value": "100.00",
+      "description": "E2E Test",
+      "method": "debit_card",
+      "cardNumber": "4242",
+      "cardHolderName": "E2E",
+      "cardExpirationDate": "12/34"
+    },
+    {
+      "id": "1",
+      "value": "100.00",
+      "description": "E2E Test",
+      "method": "debit_card",
+      "cardNumber": "4242",
+      "cardHolderName": "E2E",
+      "cardExpirationDate": "12/34"
+    },
+    {
+      "id": "8bd6",
+      "value": "100.00",
+      "description": "Compra de camisetas",
+      "method": "debit_card",
+      "cardNumber": "4242 4242 4242 4242",
+      "cardHolderName": "Juan Pérez",
+      "cardExpirationDate": "04/28",
+      "cardCvv": "123"
+    },
+    {
+      "id": "31e3",
+      "value": "100.00",
+      "description": "Compra de camisetas",
+      "method": "debit_card",
+      "cardNumber": "4242 4242 4242 4242",
+      "cardHolderName": "Juan Pérez",
+      "cardExpirationDate": "04/28",
+      "cardCvv": "123"
+    },
+    {
+      "id": "92ac",
+      "value": "100.00",
+      "description": "Compra de camisetas",
+      "method": "debit_card",
+      "cardNumber": "4242 4242 4242 4242",
+      "cardHolderName": "Juan Pérez",
+      "cardExpirationDate": "04/28",
+      "cardCvv": "123"
+    },
+    {
+      "id": "5",
+      "value": "100.00",
+      "description": "E2E Test",
+      "method": "debit_card",
+      "cardNumber": "4242",
+      "cardHolderName": "E2E",
+      "cardExpirationDate": "12/34"
+    },
+    {
+      "id": "7",
+      "value": "100.00",
+      "description": "E2E Test",
+      "method": "debit_card",
+      "cardNumber": "4242",
+      "cardHolderName": "E2E",
+      "cardExpirationDate": "12/34"
+    },
+    {
+      "id": "9",
+      "value": "100.00",
+      "description": "E2E Test",
+      "method": "debit_card",
+      "cardNumber": "4242",
+      "cardHolderName": "E2E",
+      "cardExpirationDate": "12/34"
+    }
+  ],
+  "receivables": [
+    {
+      "id": "1",
+      "status": "paid",
+      "create_date": "15/03/2020",
+      "subtotal": "340.50",
+      "discount": "2",
+      "total": "333.69",
+      "transaction_id": "2"
+    },
+    {
+      "id": "2",
+      "status": "paid",
+      "create_date": "15/03/2020",
+      "subtotal": "200",
+      "discount": "2",
+      "total": "196",
+      "transaction_id": "3"
+    },
+    {
+      "id": "3",
+      "status": "waiting_funds",
+      "create_date": "15/03/2020",
+      "subtotal": "100",
+      "discount": "4",
+      "total": "96",
+      "transaction_id": "1"
+    },
+    {
+      "id": "99",
+      "transaction_id": "99",
+      "status": "paid",
+      "create_date": "2026-06-16T16:30:00Z",
+      "subtotal": "10.00",
+      "discount": "0",
+      "total": "10.00"
+    },
+    {
+      "id": "7",
+      "transaction_id": "6",
+      "status": "paid",
+      "create_date": "2026-06-16T16:13:05Z",
+      "subtotal": "100.00",
+      "discount": "2",
+      "total": "98.00"
+    },
+    {
+      "id": "2",
+      "transaction_id": "1",
+      "status": "paid",
+      "create_date": "2026-06-16T13:19:17-03:00",
+      "subtotal": "100.00",
+      "discount": "2",
+      "total": "98.00"
+    },
+    {
+      "id": "2",
+      "transaction_id": "1",
+      "status": "paid",
+      "create_date": "2026-06-16T13:22:41-03:00",
+      "subtotal": "100.00",
+      "discount": "2",
+      "total": "98.00"
+    },
+    {
+      "id": "2",
+      "transaction_id": "1",
+      "status": "paid",
+      "create_date": "2026-06-16T13:22:44-03:00",
+      "subtotal": "100.00",
+      "discount": "2",
+      "total": "98.00"
+    },
+    {
+      "id": "2",
+      "transaction_id": "1",
+      "status": "paid",
+      "create_date": "2026-06-16T14:24:31-03:00",
+      "subtotal": "100.00",
+      "discount": "2",
+      "total": "98.00"
+    },
+    {
+      "id": "2",
+      "transaction_id": "1",
+      "status": "paid",
+      "create_date": "2026-06-16T14:24:54-03:00",
+      "subtotal": "100.00",
+      "discount": "2",
+      "total": "98.00"
+    },
+    {
+      "id": "1",
+      "transaction_id": "2",
+      "status": "paid",
+      "create_date": "2026-06-16T14:27:55-03:00",
+      "subtotal": "100.00",
+      "discount": "2",
+      "total": "98.00"
+    },
+    {
+      "id": "2",
+      "transaction_id": "1",
+      "status": "paid",
+      "create_date": "2026-06-17T09:55:18-03:00",
+      "subtotal": "100.00",
+      "discount": "2",
+      "total": "98.00"
+    },
+    {
+      "id": "1",
+      "transaction_id": "2",
+      "status": "paid",
+      "create_date": "2026-06-17T09:55:42-03:00",
+      "subtotal": "100.00",
+      "discount": "2",
+      "total": "98.00"
+    },
+    {
+      "id": "2",
+      "transaction_id": "1",
+      "status": "paid",
+      "create_date": "2026-06-17T10:01:26-03:00",
+      "subtotal": "100.00",
+      "discount": "2",
+      "total": "98.00"
+    },
+    {
+      "id": "8",
+      "transaction_id": "9",
+      "status": "paid",
+      "create_date": "2026-06-17T14:00:52Z",
+      "subtotal": "100.00",
+      "discount": "2",
+      "total": "98.00"
+    }
+  ]
+}

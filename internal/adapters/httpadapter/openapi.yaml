@@ -1,0 +1,246 @@
+openapi: 3.0.3
+info:
+  title: Merchant Transactions API
+  version: 1.0.0
+  description: API para registro de transacciones y recibibles con numeración externa.
+servers:
+  - url: http://localhost:4000
+paths:
+  /health:
+    get:
+      summary: Verificar salud de la API
+      responses:
+        '200':
+          description: API healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+  /transactions:
+    post:
+      summary: Crear una transacción
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTransactionCommand'
+      responses:
+        '201':
+          description: Transacción creada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionResponse'
+        '400':
+          description: Solicitud inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '502':
+          description: Error de servicio externo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    get:
+      summary: Listar transacciones
+      responses:
+        '200':
+          description: Lista de transacciones
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Transaction'
+  /transactions/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Obtener una transacción por ID
+      responses:
+        '200':
+          description: Transacción encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Transaction'
+        '404':
+          description: No encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      summary: Eliminar una transacción
+      responses:
+        '204':
+          description: Eliminado correctamente
+        '404':
+          description: No encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /receivables:
+    get:
+      summary: Listar recibibles
+      responses:
+        '200':
+          description: Lista de recibibles
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Receivable'
+  /receivables/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Obtener un recibible por ID
+      responses:
+        '200':
+          description: Recibible encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Receivable'
+        '404':
+          description: No encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      summary: Eliminar un recibible
+      responses:
+        '204':
+          description: Eliminado correctamente
+        '404':
+          description: No encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  schemas:
+    CreateTransactionCommand:
+      type: object
+      required:
+        - value
+        - description
+        - method
+        - cardNumber
+        - cardHolderName
+        - cardExpirationDate
+        - cardCvv
+      properties:
+        value:
+          type: string
+          example: "100.00"
+        description:
+          type: string
+          example: "Compra de camisetas"
+        method:
+          type: string
+          enum:
+            - debit_card
+            - credit_card
+          example: debit_card
+        cardNumber:
+          type: string
+          example: "4242 4242 4242 4242"
+        cardHolderName:
+          type: string
+          example: "Juan Pérez"
+        cardExpirationDate:
+          type: string
+          example: "04/28"
+        cardCvv:
+          type: string
+          example: "123"
+    Transaction:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "101"
+        value:
+          type: string
+          example: "100.00"
+        description:
+          type: string
+          example: "Compra de camisetas"
+        method:
+          type: string
+          enum:
+            - debit_card
+            - credit_card
+          example: debit_card
+        cardNumber:
+          type: string
+          example: "3456"
+        cardHolderName:
+          type: string
+          example: "Juan Pérez"
+        cardExpirationDate:
+          type: string
+          example: "04/28"
+    Receivable:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "102"
+        transaction_id:
+          type: string
+          example: "101"
+        status:
+          type: string
+          example: "paid"
+        create_date:
+          type: string
+          example: "2026-06-17T12:34:56Z"
+        payment_date:
+          type: string
+          example: "2026-07-17T12:34:56Z"
+        subtotal:
+          type: string
+          example: "100.00"
+        discount:
+          type: string
+          example: "2.00"
+        total:
+          type: string
+          example: "98.00"
+    TransactionResponse:
+      type: object
+      properties:
+        transaction:
+          $ref: '#/components/schemas/Transaction'
+        receivable:
+          $ref: '#/components/schemas/Receivable'
+    ErrorResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+          example: 404
+        error:
+          type: string
+          example: "invalid transaction value"

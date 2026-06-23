@@ -1,0 +1,37 @@
+services:
+
+  json-server:
+    image: vimagick/json-server
+    command: -h 0.0.0.0 -p 8080 /config/db.json
+    stop_grace_period: 1s
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./config:/config
+
+  numerator-api:
+    image: node:20-alpine
+    command: sh -c "yarn install && node api.js"
+    stop_grace_period: 1s
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./numerator-api:/app
+
+  orchestration-api:
+    build: .
+    ports:
+      - "4000:4000"
+    depends_on:
+      - json-server
+      - numerator-api
+    environment:
+      - JSON_SERVER_URL=http://json-server:8080
+      - NUMERATOR_URL=http://numerator-api:3000
+
+  tcpdump:
+    image: alpine
+    command: sh -c "apk add --no-cache ngrep && ngrep -l -s 200000 -d any -W byline -q -t '^(GET|POST|PUT|DELETE|PATCH|HEAD|OPTIONS) ' port 8080"
+    stop_grace_period: 1s
+    network_mode: "service:json-server"

@@ -1,0 +1,9 @@
+{
+  "id": "99",
+  "transaction_id": "99",
+  "status": "paid",
+  "create_date": "2026-06-16T16:30:00Z",
+  "subtotal": "10.00",
+  "discount": "0",
+  "total": "10.00"
+}
