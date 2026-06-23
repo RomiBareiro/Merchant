@@ -1,0 +1,8 @@
+{
+  "lint": {
+    "exclude": ["numerator-api/"]
+  },
+  "test": {
+    "exclude": ["numerator-api/"]
+  }
+}
